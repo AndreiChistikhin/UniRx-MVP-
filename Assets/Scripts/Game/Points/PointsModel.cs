@@ -8,9 +8,4 @@ public class PointsModel
     {
         PointsAmount = new ReactiveProperty<int>();
     }
-    
-    public void AddPoint()
-    {
-        PointsAmount.Value++;
-    }
 }

@@ -34,4 +34,10 @@ public abstract class SpawnedObject : MonoBehaviour
     }
 
     protected abstract void Move();
+
+    private void OnDestroy()
+    {
+        _cancellationTokenSource.Cancel();
+        _cancellationTokenSource.Dispose();
+    }
 }

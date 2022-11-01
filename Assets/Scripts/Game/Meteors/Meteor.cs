@@ -21,7 +21,7 @@ public class Meteor : SpawnedObject
 
     private void MeteorDestroyed()
     {
-        MessageBroker.Default.Publish(this);
+        MessageBroker.Default.Publish(new MessageBase(MessageType.BulletHitMeteor));
         CancellationTokenSource.Cancel();
         DestroyAction.Invoke();
     }
